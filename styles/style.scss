@@ -1,0 +1,156 @@
+$themeColor: rgb(255, 108, 70);
+$themeColorSecondary: rgba(255, 107, 70, 0.694);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+body {
+  overflow-x: hidden;
+  nav {
+    background-color: white;
+    ul {
+      display: flex;
+      li {
+        list-style-type: none;
+        margin: 1rem;
+        a {
+          color: black;
+          text-decoration: none;
+          transition: all 0.2s ease-in;
+          &:hover {
+            color: $themeColor;
+          }
+        }
+      }
+    }
+  }
+  main {
+    section.main-area {
+      min-height: 70vh;
+      background-color: white;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      div.info {
+        flex-basis: 450px;
+        padding: 1rem;
+        h1 {
+          font-size: 3.5rem;
+        }
+        h2 {
+          font-size: 1rem;
+        }
+        a {
+          color: white;
+          background-color: $themeColor;
+          text-decoration: none;
+          border-radius: 20px;
+          padding: 0.25rem 0.5rem;
+          font-size: 1.5rem;
+          display: inline-block; //因為inline元素之內外距預設只能設定水平方向
+          margin-top: 2rem; //需搭配display:inline-block
+          transition: all 0.2s ease;
+          &:hover {
+            transform: scale(1.2); //xy軸上各放大1.2倍
+          }
+        }
+      }
+
+      div.img-area {
+        flex-basis: 450px;
+        img {
+          width: 100%;
+        }
+      }
+    }
+    section.about-me {
+      background-color: $themeColor;
+      padding: 5rem 0rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      p {
+        text-align: center;
+        width: 50vw;
+        padding-top: 1rem;
+      }
+    }
+    section.resume {
+      display: flex;
+      flex-wrap: wrap;
+      padding-top: 4rem;
+
+      section.table {
+        flex: 5 1 500px;
+        padding: 2rem;
+        table {
+          --bs-table-bg: none; //bootstrap預設背景會擋住orangeRect
+          border-collapse: collapse;
+          tr {
+            border-bottom: 2px solid gray;
+            transition: all 0.2s ease;
+            &:hover {
+              background-color: $themeColorSecondary;
+            }
+            td {
+              padding: 1rem;
+            }
+          }
+        }
+      }
+
+      section.picture {
+        flex: 1 1 500px;
+        display: flex;
+        justify-content: center;
+        align-items: center; //原本預設為stretch，會讓img拉長，參見css trick flexbox
+        position: relative;
+        img {
+          width: 80%;
+        }
+
+        div.orangeRect {
+          width: 30vw;
+          height: 90vh;
+          border: 10px solid $themeColorSecondary;
+          position: absolute;
+          top: 30px;
+          right: 80px;
+          z-index: -1;
+        }
+        div.orangeRect2 {
+          width: 50vw;
+          height: 40vh;
+          border: 10px solid $themeColorSecondary;
+          position: absolute;
+          top: 300px;
+          left: -300px;
+          z-index: -1;
+        }
+        div.orangeRect3 {
+          width: 50vw;
+          height: 40vh;
+          border: 10px solid $themeColorSecondary;
+          position: absolute;
+          top: 0px;
+          left: -100px;
+          z-index: -1;
+        }
+      }
+    }
+  }
+}
