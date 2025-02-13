@@ -17,7 +17,7 @@ body {
   overflow-x: hidden;
 }
 body nav {
-  background-color: white;
+  background-color: transparent;
 }
 body nav ul {
   display: flex;
@@ -36,7 +36,7 @@ body nav ul li a:hover {
 }
 body main section.main-area {
   min-height: 70vh;
-  background-color: white;
+  background-color: transparent;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
