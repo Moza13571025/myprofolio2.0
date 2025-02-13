@@ -19,7 +19,7 @@ h6 {
 body {
   overflow-x: hidden;
   nav {
-    background-color: white;
+    background-color:transparent;
     ul {
       display: flex;
       li {
@@ -39,7 +39,7 @@ body {
   main {
     section.main-area {
       min-height: 70vh;
-      background-color: white;
+      background-color:transparent;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
