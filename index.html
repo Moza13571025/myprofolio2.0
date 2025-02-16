@@ -13,20 +13,9 @@
 </head>
 
 <body>
-  <!-- <div id="background-wrap"> -->
-  <!-- <div class="bubble x1"></div> -->
-  <!-- <div class="bubble x2"></div>
-    <div class="bubble x3"></div>
-    <div class="bubble x4"></div>
-    <div class="bubble x5"></div>
-    <div class="bubble x6"></div>
-    <div class="bubble x7"></div>
-    <div class="bubble x8"></div>
-    <div class="bubble x9"></div>
-    <div class="bubble x10"></div> -->
-  <!-- </div> -->
   <nav>
     <ul>
+      <strong><span>M</span>oza</strong>
       <li><a href="#">關於我</a></li>
       <li><a href="./contact.html">聯絡方式</a></li>
       <li><a target="blanket" href="./goWeb/index.html">圍棋網站</a></li>
@@ -128,26 +117,33 @@
       https://cdn.jsdelivr.net/npm/vanta@0.5.24/dist/vanta.birds.min.js
       "></script>
   <script>
-    VANTA.BIRDS({
-      el: ".main-area",
-      mouseControls: true,
-      touchControls: true,
-      gyroControls: false,
-      minHeight: 200.00,
-      minWidth: 200.00,
-      scale: 1.00,
-      scaleMobile: 1.00,
-      backgroundColor: 0xc09d9d,
-      color1: 0x220d03,
-      color2: 0xe3a319,
-      wingSpan: 31.00,
-      speedLimit: 2.00,
-      separation: 33.00,
-      alignment: 100.00,
-      cohesion: 100.00,
-      quantity: 3.00,
-      backgroundAlpha: 0.13
-    })
+    document.addEventListener("DOMContentLoaded", function () {
+      if (window.innerWidth >= 768) {
+        VANTA.BIRDS({
+          el: ".main-area",
+          mouseControls: true,
+          touchControls: true,
+          gyroControls: false,
+          minHeight: 200.00,
+          minWidth: 200.00,
+          scale: 1.00,
+          scaleMobile: 1.00,
+          backgroundColor: 0xc09d9d,
+          color1: 0x220d03,
+          color2: 0xe3a319,
+          wingSpan: 31.00,
+          speedLimit: 2.00,
+          separation: 33.00,
+          alignment: 100.00,
+          cohesion: 100.00,
+          quantity: 3.00,
+          backgroundAlpha: 0.13
+        });
+      } else {
+        // 手機版啟用 CSS 背景動畫
+        document.body.innerHTML += '<ul class=backgroundForMobile><li></li><li></li><li></li><li></li></ul>';
+      }
+    });
   </script>
 </body>
 

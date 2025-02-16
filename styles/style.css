@@ -21,6 +21,16 @@ body nav {
 }
 body nav ul {
   display: flex;
+  margin-bottom: 0;
+}
+body nav ul strong {
+  margin: 1rem;
+}
+body nav ul strong:hover {
+  color: rgb(255, 108, 70);
+}
+body nav ul strong span {
+  color: rgb(255, 108, 70);
 }
 body nav ul li {
   list-style-type: none;
@@ -144,4 +154,72 @@ body main section.resume section.picture div.orangeRect3 {
   top: 0px;
   left: -100px;
   z-index: -1;
+}
+@keyframes animate {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+    border-radius: 0;
+  }
+  100% {
+    transform: translateY(-1000px) rotate(720deg);
+    opacity: 0;
+    border-radius: 50%;
+  }
+}
+body .backgroundForMobile {
+  position: fixed;
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+body .backgroundForMobile li {
+  position: absolute;
+  display: block;
+  list-style: none;
+  width: 10px;
+  height: 10px;
+  background: rgba(102, 204, 255, 0.6705882353);
+  animation: animate 39s linear infinite;
+}
+body .backgroundForMobile li:nth-child(2) {
+  left: 64%;
+  width: 141px;
+  height: 141px;
+  bottom: -141px;
+  animation-delay: 1s;
+}
+body .backgroundForMobile li:nth-child(3) {
+  left: 44%;
+  width: 136px;
+  height: 136px;
+  bottom: -136px;
+  animation-delay: 5s;
+}
+body .backgroundForMobile li:nth-child(4) {
+  left: 46%;
+  width: 134px;
+  height: 134px;
+  bottom: -134px;
+  animation-delay: 10s;
+}
+body .backgroundForMobile li:nth-child(5) {
+  left: 21%;
+  width: 153px;
+  height: 153px;
+  bottom: -153px;
+  animation-delay: 20s;
+}
+
+@media screen and (max-width: 767px) {
+  .orangeRect,
+  .orangeRect2,
+  .orangeRect3 {
+    display: none;
+  }
 }/*# sourceMappingURL=style.css.map */

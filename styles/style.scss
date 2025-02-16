@@ -1,5 +1,6 @@
 $themeColor: rgb(255, 108, 70);
 $themeColorSecondary: rgba(255, 107, 70, 0.694);
+$themeColor3rd: #66ccffab;
 
 * {
   margin: 0;
@@ -19,9 +20,22 @@ h6 {
 body {
   overflow-x: hidden;
   nav {
-    background-color:transparent;
+    background-color: transparent;
     ul {
       display: flex;
+      margin-bottom: 0;
+      strong {
+        margin: 1rem;
+        &:hover{
+          color: $themeColor;
+          // &::after{
+          //   content: "~";
+          // }
+        }
+        span {
+          color:$themeColor;
+        }
+      }
       li {
         list-style-type: none;
         margin: 1rem;
@@ -39,7 +53,7 @@ body {
   main {
     section.main-area {
       min-height: 70vh;
-      background-color:transparent;
+      background-color: transparent;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
@@ -152,5 +166,82 @@ body {
         }
       }
     }
+  }
+  @keyframes animate {
+    0% {
+      transform: translateY(0) rotate(0deg);
+      opacity: 1;
+      border-radius: 0;
+    }
+    100% {
+      transform: translateY(-1000px) rotate(720deg);
+      opacity: 0;
+      border-radius: 50%;
+    }
+  }
+
+  .backgroundForMobile {
+    position: fixed;
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    // background:transparent;
+    overflow: hidden;
+  }
+  .backgroundForMobile li {
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 10px;
+    height: 10px;
+    background: $themeColor3rd;
+    animation: animate 39s linear infinite;
+  }
+  // .backgroundForMobile li:nth-child(1) {
+  //   left: 66%;
+  //   width: 151px;
+  //   height: 151px;
+  //   bottom: -151px;
+  //   animation-delay: 1s;
+  // }
+  .backgroundForMobile li:nth-child(2) {
+    left: 64%;
+    width: 141px;
+    height: 141px;
+    bottom: -141px;
+    animation-delay: 1s;
+  }
+  .backgroundForMobile li:nth-child(3) {
+    left: 44%;
+    width: 136px;
+    height: 136px;
+    bottom: -136px;
+    animation-delay: 5s;
+  }
+  .backgroundForMobile li:nth-child(4) {
+    left: 46%;
+    width: 134px;
+    height: 134px;
+    bottom: -134px;
+    animation-delay: 10s;
+  }
+  .backgroundForMobile li:nth-child(5) {
+    left: 21%;
+    width: 153px;
+    height: 153px;
+    bottom: -153px;
+    animation-delay: 20s;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .orangeRect,
+  .orangeRect2,
+  .orangeRect3 {
+    display: none;
   }
 }
