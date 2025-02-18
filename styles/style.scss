@@ -163,6 +163,18 @@ body {
         }
       }
     }
+    section.profolio {
+      border: 1px solid red;
+      background-color: $themeColor;
+      padding: 5rem 0rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      h2 {
+        padding-bottom: 1rem;
+      }
+    }
   }
   @keyframes animate {
     0% {
