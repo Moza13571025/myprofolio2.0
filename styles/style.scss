@@ -164,7 +164,6 @@ body {
       }
     }
     section.profolio {
-      border: 1px solid red;
       background-color: $themeColor;
       padding: 5rem 0rem;
       display: flex;
@@ -174,6 +173,41 @@ body {
       h2 {
         padding-bottom: 1rem;
       }
+    }
+    section.contact {
+      padding: 5rem 0rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      p,
+      a {
+        text-align: center;
+        width: 50vw;
+        padding-top: 1rem;
+        text-decoration: none;
+        color: #000;
+      }
+    }
+    footer {
+      text-align: center;
+      padding: 5px;
+      background-color: $themeColorSecondary;
+      color: #000;
+    }
+    #topButton {
+      position: fixed;
+      bottom: 1rem;
+      right: 1rem;
+      display: none; /* 預設隱藏按鈕 */
+
+      height: 50px;
+      width: 50px;
+      background-color: $themeColor3rd;
+      color: #03045e;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
     }
   }
   @keyframes animate {

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -147,7 +148,6 @@ body main section.resume section.picture div.orangeRect3 {
   z-index: -1;
 }
 body main section.profolio {
-  border: 1px solid red;
   background-color: rgb(255, 108, 70);
   padding: 5rem 0rem;
   display: flex;
@@ -157,6 +157,40 @@ body main section.profolio {
 }
 body main section.profolio h2 {
   padding-bottom: 1rem;
+}
+body main section.contact {
+  padding: 5rem 0rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body main section.contact p,
+body main section.contact a {
+  text-align: center;
+  width: 50vw;
+  padding-top: 1rem;
+  text-decoration: none;
+  color: #000;
+}
+body main footer {
+  text-align: center;
+  padding: 5px;
+  background-color: rgba(255, 107, 70, 0.694);
+  color: #000;
+}
+body main #topButton {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  display: none; /* 預設隱藏按鈕 */
+  height: 50px;
+  width: 50px;
+  background-color: rgba(102, 204, 255, 0.6705882353);
+  color: #03045e;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
 }
 @keyframes animate {
   0% {
