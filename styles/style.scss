@@ -24,18 +24,15 @@ body {
     ul {
       display: flex;
       margin-bottom: 0;
-      strong {
-        margin: 1rem;
-        &:hover{
-          color: $themeColor;
-          // &::after{
-          //   content: "~";
-          // }
-        }
-        span {
-          color:$themeColor;
-        }
-      }
+      // strong {
+      //   margin: 1rem;
+      //   &:hover {
+      //     color: $themeColor;
+      //   }
+      //   span {
+      //     color: $themeColor;
+      //   }
+      // }
       li {
         list-style-type: none;
         margin: 1rem;

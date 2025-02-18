@@ -44,6 +44,18 @@ body nav ul li a {
 body nav ul li a:hover {
   color: rgb(255, 108, 70);
 }
+body nav div.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+body nav div.menu-toggle span {
+  width: 30px;
+  height: 3px;
+  background: white;
+  display: block;
+}
 body main section.main-area {
   min-height: 70vh;
   background-color: transparent;
