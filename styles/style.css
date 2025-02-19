@@ -90,7 +90,7 @@ body main section.about-me p {
 body main section.resume {
   display: flex;
   flex-wrap: wrap;
-  padding-top: 4rem;
+  padding-block: 2rem;
 }
 body main section.resume section.table {
   flex: 5 1 500px;
@@ -158,6 +158,10 @@ body main section.profolio {
 body main section.profolio h2 {
   padding-bottom: 1rem;
 }
+body main section.profolio div.card:hover {
+  transform: scale(1.03);
+  transition: transform 0.15s ease-in-out;
+}
 body main section.contact {
   padding: 5rem 0rem;
   display: flex;
@@ -172,6 +176,12 @@ body main section.contact a {
   padding-top: 1rem;
   text-decoration: none;
   color: #000;
+}
+body main section.contact a {
+  color: rgb(255, 108, 70);
+}
+body main section.contact a:hover {
+  font-weight: bolder;
 }
 body main footer {
   text-align: center;
@@ -258,5 +268,11 @@ body .backgroundForMobile li:nth-child(5) {
   .orangeRect2,
   .orangeRect3 {
     display: none;
+  }
+  .section.resume {
+    padding-block: 4rem 1rem;
+  }
+  .section.resume .section.picture img {
+    width: 60%;
   }
 }/*# sourceMappingURL=style.css.map */

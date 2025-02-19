@@ -79,7 +79,6 @@ body {
           }
         }
       }
-
       div.img-area {
         flex-basis: 450px;
         img {
@@ -103,8 +102,7 @@ body {
     section.resume {
       display: flex;
       flex-wrap: wrap;
-      padding-top: 4rem;
-
+      padding-block: 2rem;
       section.table {
         flex: 5 1 500px;
         padding: 2rem;
@@ -123,7 +121,6 @@ body {
           }
         }
       }
-
       section.picture {
         flex: 1 1 500px;
         display: flex;
@@ -173,6 +170,10 @@ body {
       h2 {
         padding-bottom: 1rem;
       }
+      div.card:hover {
+        transform: scale(1.03);
+        transition: transform 0.15s ease-in-out;
+      }
     }
     section.contact {
       padding: 5rem 0rem;
@@ -187,6 +188,12 @@ body {
         padding-top: 1rem;
         text-decoration: none;
         color: #000;
+      }
+      a {
+        color: $themeColor;
+        &:hover {
+          font-weight: bolder;
+        }
       }
     }
     footer {
@@ -210,6 +217,7 @@ body {
       cursor: pointer;
     }
   }
+  // 手機版動畫
   @keyframes animate {
     0% {
       transform: translateY(0) rotate(0deg);
@@ -222,7 +230,6 @@ body {
       border-radius: 50%;
     }
   }
-
   .backgroundForMobile {
     position: fixed;
     z-index: -1;
@@ -286,5 +293,13 @@ body {
   .orangeRect2,
   .orangeRect3 {
     display: none;
+  }
+  .section.resume {
+    padding-block: 4rem 1rem;
+    .section.picture {
+      img {
+        width: 60%;
+      }
+    }
   }
 }
