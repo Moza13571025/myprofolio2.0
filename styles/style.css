@@ -158,9 +158,22 @@ body main section.profolio {
 body main section.profolio h2 {
   padding-bottom: 1rem;
 }
+body main section.profolio div.card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
 body main section.profolio div.card:hover {
   transform: scale(1.03);
   transition: transform 0.15s ease-in-out;
+}
+body main section.profolio div.card .card-body {
+  flex-grow: 1;
+}
+body main section.profolio div.card .card-img-top {
+  height: 16rem;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 body main section.contact {
   padding: 5rem 0rem;

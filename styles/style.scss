@@ -170,9 +170,21 @@ body {
       h2 {
         padding-bottom: 1rem;
       }
-      div.card:hover {
-        transform: scale(1.03);
-        transition: transform 0.15s ease-in-out;
+      div.card {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        &:hover {
+          transform: scale(1.03);
+          transition: transform 0.15s ease-in-out;
+        }
+        .card-body {
+          flex-grow: 1; // 讓 card-body 填滿剩餘空間
+        }
+        .card-img-top {
+          height: 16rem; // 設定固定高度
+          object-fit: cover; // 確保圖片不變形，裁切超出部分
+        }
       }
     }
     section.contact {
