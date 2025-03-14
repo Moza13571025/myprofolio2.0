@@ -1,13 +1,15 @@
 let sendButton = document.querySelector("button");
 console.log(sendButton); // 確認是否成功取得 button
 
-function send() {
+function send(event) {
+  event.preventDefault(); // 防止表單默認提交行為
+
   let name = document.querySelector("#nameValue").value;
-  let phone = document.querySelector("#phoneValue").value;
+  let email = document.querySelector("#emailValue").value;
   let demand = document.querySelector("#demandValue").value;
 
   fetch(
-    "https://script.google.com/macros/s/AKfycbxGP4L-ikpF6BWsLtjpgcwj9i2k647JgE6tDcUMvJe1flp4h3LEd-iTFZVYC4rPOTLU/exec",
+    "https://script.google.com/macros/s/AKfycbzNg4n7KsnEWv__5GgEhfUJQtHH3bdY9SIDFBYDu_8OAK_YpaHSgSvyXlQvgKcZBBLT/exec",
     {
       method: "POST",
       mode: "no-cors", // **關閉 CORS**
@@ -16,7 +18,7 @@ function send() {
       },
       body: JSON.stringify({
         name: name,
-        phone: phone,
+        email: email,
         demand: demand,
       }),
     }

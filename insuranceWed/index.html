@@ -6,6 +6,8 @@
   <!-- Required meta tags -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" href="./style.css">
 </head>
 
@@ -99,12 +101,40 @@
           <p>如果你是自由接案工程師或創業者，無保險的話，一旦收入中斷會對你的生活造成很大壓力。考慮購買適合的保險，如意外險、收入中斷險、甚至是失業保險，這樣就能在遇到突發情況時，減少經濟上的困擾。</p>
         </li>
       </ol>
-      <div>
-        <input type="text" id="nameValue">
-        <!-- <input type="text" id="nameValue">信箱 -->
-        <input type="text" id="phoneValue">電話
-        <input type="text" id="demandValue">商品需求
-        <button>送出</button>
+      <div class="card mb-3 border-success" style="max-width: 80dvw;">
+        <div class="row g-0">
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title text-center">免費諮詢</h5>
+              <form>
+                <div class="mb-3">
+                  <label for="nameValue" class="form-label">您的大名？</label>
+                  <input type="text" class="form-control" id="nameValue" aria-describedby="nameValue">
+                </div>
+                <div class="mb-3">
+                  <label for="emailValue" class="form-label">電子信箱？</label>
+                  <input type="email" class="form-control" id="emailValue">
+                </div>
+                <div class="mb-3 ">
+                  <label for="demandValue" class="form-label">您想了解的商品內容？</label>
+                  <select class="form-select" id="demandValue" aria-label="Default select example">
+                    <option selected>請選擇</option>
+                    <option value="醫療險或重大疾病險">醫療險或重大疾病險</option>
+                    <option value="年金險或長期照護險">年金險或長期照護險</option>
+                    <option value="產物保險">產物保險</option>
+                    <option value="專業責任險">專業責任險</option>
+                  </select>
+                </div>
+                <div class="d-grid gap-2 col-6 mx-auto">
+                <button type="submit" class="btn btn-primary btn-lg ">送出</button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="col-md-4" style="background-image:url(./images/contact.jpg); background-size: cover; background-position: center;" >
+            <!-- <img src="./images/contact.jpg" class="img-fluid rounded-start" alt="..." style=";"> -->
+          </div>
+        </div>
       </div>
     </section>
   </main>
@@ -116,5 +146,9 @@
     src="https://cdnjs.cloudflare.com/ajax/libs/canvas-nest.js/2.0.4/canvas-nest.js"
     integrity="sha512-P+NGabN/TJDOnCVOFJO+E06TBm4i+M8dTT91lWg/8UpwLrzicEXIypmABPpA47D0x6r+yxFHjYIZKWhc1h7xlQ=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
 </body>
+
 </html>
