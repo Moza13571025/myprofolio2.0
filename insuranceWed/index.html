@@ -106,19 +106,19 @@
           <div class="col-md-8">
             <div class="card-body">
               <h5 class="card-title text-center">免費諮詢</h5>
-              <form>
+              <form id="contactForm">
                 <div class="mb-3">
                   <label for="nameValue" class="form-label">您的大名？</label>
-                  <input type="text" class="form-control" id="nameValue" aria-describedby="nameValue">
+                  <input type="text" class="form-control" id="nameValue" aria-describedby="nameValue" required>
                 </div>
                 <div class="mb-3">
                   <label for="emailValue" class="form-label">電子信箱？</label>
-                  <input type="email" class="form-control" id="emailValue">
+                  <input type="email" class="form-control" id="emailValue" required>
                 </div>
                 <div class="mb-3 ">
                   <label for="demandValue" class="form-label">您想了解的商品內容？</label>
-                  <select class="form-select" id="demandValue" aria-label="Default select example">
-                    <option selected>請選擇</option>
+                  <select class="form-select" id="demandValue" aria-label="Default select example" required>
+                    <option selected disabled value="">請選擇</option>
                     <option value="醫療險或重大疾病險">醫療險或重大疾病險</option>
                     <option value="年金險或長期照護險">年金險或長期照護險</option>
                     <option value="產物保險">產物保險</option>
@@ -126,13 +126,13 @@
                   </select>
                 </div>
                 <div class="d-grid gap-2 col-6 mx-auto">
-                <button type="submit" class="btn btn-primary btn-lg ">送出</button>
+                  <button type="submit" class="btn btn-primary btn-lg ">送出</button>
                 </div>
               </form>
             </div>
           </div>
-          <div class="col-md-4" style="background-image:url(./images/contact.jpg); background-size: cover; background-position: center;" >
-            <!-- <img src="./images/contact.jpg" class="img-fluid rounded-start" alt="..." style=";"> -->
+          <div class="col-md-4"
+            style="background-image:url(./images/contact.jpg); background-size: cover; background-position: center;">
           </div>
         </div>
       </div>
